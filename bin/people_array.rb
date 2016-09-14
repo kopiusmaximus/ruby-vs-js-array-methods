@@ -12,3 +12,10 @@ puts "Total females: #{females.count}"
 males = people.select { |person| person.gender == 'm' }
 
 puts "Total males: #{males.count}"
+
+# all the people older than me
+
+older = people.select { |person| person.age > 30 }
+
+puts "Number of people older than me: #{older.count}"
+

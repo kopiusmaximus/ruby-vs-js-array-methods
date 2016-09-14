@@ -36,4 +36,14 @@ loadPeople().then((people) => {
   // also, syntax error
 
   console.log('Total males (using reduce): ', male);
+
+  // all the people older than me
+  const isOlder = (person) => {
+    return person.age() > 30;
+  };
+
+  let older = people.filter(isOlder).reduce(increment, 0);
+
+  console.log('Number of people older than me: ', older);
+
 }).catch((error) => console.log(error));
