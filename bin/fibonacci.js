@@ -24,3 +24,12 @@ let prodFibs = fibs.filter(notZero).reduce(product, 1);
 
 console.log('The product of the first ten fibonacci numbers, excluding zero, is ', prodFibs);
 
+// sum of the odd elements of the fibs array
+const odd = (number) => {
+  return number % 2 !== 0;
+};
+
+let sumOdd = fibs.filter(odd).reduce(sum);
+
+console.log('The sum of the first five odd fibonacci numbers, is ', sumOdd);
+

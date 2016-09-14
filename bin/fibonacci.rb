@@ -11,3 +11,9 @@ prod_fibs = fibs.reject { |fib| fib == 0 }.reduce(:*)
 
 puts "The product of the first ten fibonacci numbers, excluding zero, is #{prod_fibs}"
 
+# sum of the odd elements of the fibs array
+
+sum_odd = fibs.select(&:odd?).reduce(:+)
+
+puts "The sum of the first five odd fibonacci numbers, is #{sum_odd}"
+
