@@ -33,3 +33,12 @@ let sumOdd = fibs.filter(odd).reduce(sum);
 
 console.log('The sum of the first five odd fibonacci numbers, is ', sumOdd);
 
+// product of even fibs excluding zero
+
+const even = (number) => {
+  return !odd(number);
+};
+
+let prodEven = fibs.filter(notZero).filter(even).reduce(product);
+
+console.log('The product of the first five even fibonacci numbers, excluding zero, is ', prodEven);

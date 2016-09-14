@@ -17,3 +17,8 @@ sum_odd = fibs.select(&:odd?).reduce(:+)
 
 puts "The sum of the first five odd fibonacci numbers, is #{sum_odd}"
 
+# product of even fibs excluding zero
+
+prod_even = fibs.reject { |fib| fib == 0 }.select(&:even?).reduce(:*)
+
+puts "The product of the first five even fibonacci numbers, excluding zero, is #{prod_even}"
