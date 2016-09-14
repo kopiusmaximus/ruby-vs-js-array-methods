@@ -65,4 +65,17 @@ loadPeople().then((people) => {
 
   console.log('Number of alliteratives: ', alliterative);
 
+  // average age of all people
+  const agePresent = (person) => {
+    // this isn't necessary
+    return !!person.age();
+  };
+
+  const sumAge = (previous, currentPerson) => {
+    return previous + currentPerson.age();
+  };
+
+  let averageAge = people.filter(agePresent).reduce(sumAge, 0) / people.length;
+
+  console.log('Average age of all people: ', averageAge);
 }).catch((error) => console.log(error));

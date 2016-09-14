@@ -33,3 +33,10 @@ end
 
 puts "Number of alliteratives: #{alliteratives.count}"
 
+# average age of all people
+
+average_age = people.reduce(0) do |sum, person|
+  sum + person.age
+end / people.count.to_f
+
+puts "Average age of all people: #{average_age}"
