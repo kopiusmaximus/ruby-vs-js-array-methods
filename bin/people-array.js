@@ -24,4 +24,16 @@ loadPeople().then((people) => {
   let female = people.filter(isFemale).reduce(increment, 0);
 
   console.log('Total females (using reduce): ', female);
+
+  const isMale = (person) => {
+    return person.gender === 'm';
+  };
+
+  let male = people.filter(isMale).reduce(increment, 0);
+  // people.filter(!isFemale).reduce(increment, 0); // WRONG
+  // this does not answer the question "How many males?", instead it answers
+  // the question "How many not females?"
+  // also, syntax error
+
+  console.log('Total males (using reduce): ', male);
 }).catch((error) => console.log(error));
