@@ -7,7 +7,7 @@ puts "The sum of the first ten fibonacci numbers is #{sum_fibs}"
 
 # product of all fibs excluding zero
 
-prod_fibs = fibs.reject { |fib| fib == 0 }.reduce(:*)
+prod_fibs = fibs.reject(&:zero?).reduce(:*)
 
 puts "The product of the first ten fibonacci numbers, excluding zero, is #{prod_fibs}"
 
@@ -19,6 +19,6 @@ puts "The sum of the first five odd fibonacci numbers, is #{sum_odd}"
 
 # product of even fibs excluding zero
 
-prod_even = fibs.reject { |fib| fib == 0 }.select(&:even?).reduce(:*)
+prod_even = fibs.reject(&:zero?).select(&:even?).reduce(:*)
 
 puts "The product of the first five even fibonacci numbers, excluding zero, is #{prod_even}"
