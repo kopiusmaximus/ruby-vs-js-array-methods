@@ -19,3 +19,9 @@ older = people.select { |person| person.age > 30 }
 
 puts "Number of people older than me: #{older.count}"
 
+# all the people younger than me
+
+younger = people.select { |person| person.age < 30 }
+
+puts "Number of people younger than me: #{younger.count}"
+

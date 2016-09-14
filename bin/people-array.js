@@ -46,4 +46,13 @@ loadPeople().then((people) => {
 
   console.log('Number of people older than me: ', older);
 
+  // all the people younger than me
+  const isYounger = (person) => {
+    return person.age() < 30;
+  };
+
+  let younger = people.filter(isYounger).reduce(increment, 0);
+
+  console.log('Number of people younger than me: ', younger);
+
 }).catch((error) => console.log(error));
