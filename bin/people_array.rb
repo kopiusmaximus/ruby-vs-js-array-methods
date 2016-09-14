@@ -25,3 +25,11 @@ younger = people.select { |person| person.age < 30 }
 
 puts "Number of people younger than me: #{younger.count}"
 
+# all the people whose first and last names begin with the same letter
+
+alliteratives = people.select do |person|
+  person.given_name[0] == person.surname[0]
+end
+
+puts "Number of alliteratives: #{alliteratives.count}"
+

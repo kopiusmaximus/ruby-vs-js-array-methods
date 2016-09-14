@@ -55,4 +55,14 @@ loadPeople().then((people) => {
 
   console.log('Number of people younger than me: ', younger);
 
+  // all the people whose first and last names begin with the same letter
+
+  const isAlliterative = (person) => {
+    return person.given_name[0] === person.surname[0];
+  };
+
+  let alliterative = people.filter(isAlliterative).reduce(increment, 0);
+
+  console.log('Number of alliteratives: ', alliterative);
+
 }).catch((error) => console.log(error));
