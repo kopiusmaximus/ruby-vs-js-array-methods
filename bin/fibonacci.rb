@@ -5,3 +5,9 @@ sum_fibs = fibs.reduce(0, :+)
 
 puts "The sum of the first ten fibonacci numbers is #{sum_fibs}"
 
+# product of all fibs excluding zero
+
+prod_fibs = fibs.reject { |fib| fib == 0 }.reduce(:*)
+
+puts "The product of the first ten fibonacci numbers, excluding zero, is #{prod_fibs}"
+
